@@ -1,0 +1,78 @@
+.settings{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.settings_wrapper{
+    padding-top: 32px;
+    width: 95%;
+    height: 72px; 
+}
+
+.settings_row{
+    padding: 0px;
+    width: 912px;
+    height: 48px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), #030919;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.settings_row_title{
+    width: 320px;
+    height: 16px;
+    padding-left: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.9);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+input[type="radio" i]{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+input[type="number" i]{
+    width: 60px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 123% */
+
+    display: flex;
+    align-items: center;
+
+    /* Secondary/High */
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.settings_input-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
