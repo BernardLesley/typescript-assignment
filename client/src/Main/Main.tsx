@@ -12,6 +12,25 @@ const Main = () => {
     const [events, setEvents] = useState<Message[]>([]);
 
     useEffect(() => {
+        localStorage.setItem("events", JSON.stringify(events));
+    }, [events]);
+
+    useEffect(() => {
+        const handleStorageChange = (event: StorageEvent) => {
+            if (event.key === "events") {
+                setEvents(event.newValue ? JSON.parse(event.newValue) : []);
+            }
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+
+        return () => {
+            window.removeEventListener("storage", handleStorageChange);
+        };
+    }, []);
+
+
+    useEffect(() => {
         const eventSource = new EventSource("http://127.0.0.1:9000/events");
         eventSource.onmessage = function(event) {
             const data = JSON.parse(event.data);
